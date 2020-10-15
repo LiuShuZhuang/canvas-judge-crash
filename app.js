@@ -6,6 +6,9 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    // console.log(wx.getSystemInfoSync());
+    this.globalData.pixelScale = wx.getSystemInfoSync().windowWidth/375/2;
+
     // 登录
     wx.login({
       success: res => {
@@ -34,6 +37,11 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+
+    touchCrashTimeStamp: 0, //当前点击时候的时间戳
+    touchCrashIndex: null, //上次点击的碰撞点
+
+    pixelScale: 1,  //用于canvas比例计算 1为750rpx;
   }
 })

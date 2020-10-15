@@ -1,2 +1,5 @@
 {
+  "usingComponents":{
+    "scheme-canvas": "../../components/scheme-canvas/scheme-canvas"
+  }
 }

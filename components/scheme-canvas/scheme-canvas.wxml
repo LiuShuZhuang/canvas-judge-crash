@@ -1,0 +1,14 @@
+<!--components/scheme-canvas/scheme-canvas.wxml-->
+<view class="main" id="crash-Main">
+  <canvas catchtap="canvasClick" class="{{!canvasShow?'positionHidden':''}}" canvas-id="crash" id="crash" style="width:550rpx;height:550rpx;"></canvas>
+  <!-- <view class="crash-items">
+    <block wx:for="{{1}}" wx:key="index">
+      <view class="crash-list" style="transform: rotate({{(36*(index+1))}}deg)">
+          <view class="crash-list-child" data-index='{{index}}' catchtap="changeState">
+            <view class="crash-list-child-stop" catchtap="test"></view>
+          </view>
+      </view>
+    </block>
+  </view> -->
+  <image class="canvas-img" wx:if="{{!canvasShow}}" src="{{canvasImage}}"></image>
+</view>

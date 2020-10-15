@@ -1,0 +1,6 @@
+/* components/scheme-css/scheme-css.wxss */
+.main{
+  width: 750rpx;
+  height: 750rpx;
+  border: 1rpx solid #f60;
+}
